@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #e477be; /* warna gelap elegan */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #f1f5f9;
+}
+
+.form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form input, .form button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+}
+
+#todo-input {
+    flex: 2;
+    background: #144282;
+    color: #fff;
+}
+
+#date-input {
+    flex: 1;
+    background: #334155;
+    color: #fff;
+}
+
+#add-btn {
+    width: 50px;
+    background: #27728a;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.actions button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#filter-btn {
+    background: #475569;
+    color: #fff;
+}
+
+#delete-all-btn {
+    background: #1ed062;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+th {
+    background: #334155;
+    padding: 12px;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    background: #969622;
+    border-radius: 6px;
+}
+
+tr td:nth-child(1) { text-align: left; width: 40%; }
+tr td:nth-child(2) { width: 20%; }
+tr td:nth-child(3) { width: 15%; }
+tr td:nth-child(4) { width: 25%; }
+
+.status-done {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+button.complete-btn {
+    background: #22c55e;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    margin-right: 5px;
+}
+
+button.delete-btn {
+    background: #ef4444;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
