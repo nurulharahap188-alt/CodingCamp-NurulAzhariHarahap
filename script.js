@@ -4,9 +4,16 @@ const addBtn = document.getElementById("add-btn");
 const todoBody = document.getElementById("todo-body");
 const deleteAllBtn = document.getElementById("delete-all-btn");
 
+// Event tombol tambah
 addBtn.addEventListener("click", addTask);
+
+// Event tombol delete all
 deleteAllBtn.addEventListener("click", () => {
-  todoBody.innerHTML = <tr><td colspan="4" style="text-align:center; color:#aaa;">No task found</td></tr>;
+  todoBody.innerHTML = `
+    <tr>
+      <td colspan="4" style="text-align:center; color:#aaa;">No task found</td>
+    </tr>
+  `;
 });
 
 function addTask() {
@@ -25,7 +32,7 @@ function addTask() {
 
   const row = document.createElement("tr");
   row.innerHTML = `
-    <td>${task}</td>
+    <td>${task.toUpperCase()}</td>
     <td>${dueDate}</td>
     <td><span class="status-text">Pending</span></td>
     <td>
@@ -47,7 +54,11 @@ function addTask() {
   row.querySelector(".delete-btn").addEventListener("click", () => {
     row.remove();
     if (todoBody.children.length === 0) {
-      todoBody.innerHTML = <tr><td colspan="4" style="text-align:center; color:#aaa;">No task found</td></tr>;
+      todoBody.innerHTML = `
+        <tr>
+          <td colspan="4" style="text-align:center; color:#aaa;">No task found</td>
+        </tr>
+      `;
     }
   });
 
